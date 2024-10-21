@@ -1,17 +1,17 @@
 services:
   http-https-echo:
-    container_name: "http-https-echo"
+    container_name: http-https-echo
     image: mendhak/http-https-echo
     networks:
       - projeto-korp
 
   nginx:
-    container_name: "nginx"
+    container_name: nginx
     image: nginx
     ports:
-      - "80:80"
+      - 80:80
     volumes:
-      - "./nginx.conf.d:/etc/nginx/conf.d"
+      - ./nginx.conf.d:/etc/nginx/conf.d
     networks:
       - projeto-korp
 
