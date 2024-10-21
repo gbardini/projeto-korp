@@ -1,0 +1,10 @@
+services:
+  http-https-echo:
+    container_name: "http-https-echo"
+    image: mendhak/http-https-echo
+    networks:
+      - projeto-korp
+
+networks:
+  projeto-korp:
+    driver: bridge
