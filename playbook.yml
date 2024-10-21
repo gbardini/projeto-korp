@@ -38,3 +38,12 @@
           - containerd.io
           - docker-buildx-plugin
           - docker-compose-plugin
+
+    - name: Iniciando Docker service
+      ansible.builtin.service:
+        name: docker
+        state: started
+
+    - name: Iniciando containers do docker-compose
+      ansible.builtin.shell:
+        cmd: docker compose up -d
