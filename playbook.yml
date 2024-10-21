@@ -38,3 +38,7 @@
           - containerd.io
           - docker-buildx-plugin
           - docker-compose-plugin
+
+    - name: Workaround for docker inside containers
+      ansible.builtin.apt:
+        cmd: sed -i 's/ulimit -Hn/ulimit -h/g' /etc/init.d/docker
