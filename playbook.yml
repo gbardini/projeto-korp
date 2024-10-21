@@ -1,0 +1,13 @@
+---
+- name: Provisionando dependências do projeto
+  hosts: localhost
+  become: false
+  tasks:
+
+    - name: Instalando dependências do docker
+      ansible.builtin.apt:
+        name:
+          - ca-certificates
+          - curl
+          - gnupg
+        state: present
