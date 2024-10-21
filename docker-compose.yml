@@ -5,6 +5,16 @@ services:
     networks:
       - projeto-korp
 
+  nginx:
+    container_name: "nginx"
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - "./nginx.conf.d:/etc/nginx/conf.d"
+    networks:
+      - projeto-korp
+
 networks:
   projeto-korp:
     driver: bridge
