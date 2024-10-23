@@ -53,6 +53,12 @@ curl localhost:80
 
 A resposta deve ser um json gerado pelo container http-https-echo.
 
+
+## Links para documentação oficial docker e ansible para instalação
+
+- Ansible: https://docs.ansible.com/ansible/latest/installation_guide/intro_installation.html#installation-guide
+- Docker Ubuntu: https://docs.docker.com/desktop/install/linux/ubuntu/
+
 ## Componentes do Projeto
 
 ### nginx.conf.d/http-https-echo.conf
